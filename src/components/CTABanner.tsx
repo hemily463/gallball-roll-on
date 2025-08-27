@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import SignupModal from "./SignupModal";
 
 const CTABanner = () => {
+  const [isSignupOpen, setIsSignupOpen] = useState(false);
   return (
     <section className="py-24 bg-gradient-hero relative overflow-hidden">
       {/* Background Elements */}
@@ -35,6 +38,7 @@ const CTABanner = () => {
               variant="secondary" 
               size="lg" 
               className="group bg-white text-primary hover:bg-white/90 shadow-accent"
+              onClick={() => setIsSignupOpen(true)}
             >
               Start Your Free Account
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -82,6 +86,11 @@ const CTABanner = () => {
           </div>
         </div>
       </div>
+
+      <SignupModal 
+        open={isSignupOpen} 
+        onOpenChange={setIsSignupOpen} 
+      />
     </section>
   );
 };
