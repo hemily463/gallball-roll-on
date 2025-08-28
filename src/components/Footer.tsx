@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { Twitter, Linkedin, Github, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import NewsletterModal from "./NewsletterModal";
 
 const Footer = () => {
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
+  
   return (
     <footer className="bg-card border-t border-border/50">
       <div className="container mx-auto px-6 py-16">
@@ -103,13 +108,30 @@ const Footer = () => {
             </Link>
           </div>
           
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Made with</span>
-            <div className="w-4 h-4 rounded-full bg-gradient-accent"></div>
-            <span>for a better tomorrow</span>
+          <div className="flex items-center gap-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsNewsletterOpen(true)}
+              className="gap-2"
+            >
+              <Mail className="w-4 h-4" />
+              Subscribe to Newsletter
+            </Button>
+            
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <span>Made with</span>
+              <div className="w-4 h-4 rounded-full bg-gradient-accent"></div>
+              <span>for a better tomorrow</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <NewsletterModal 
+        open={isNewsletterOpen} 
+        onOpenChange={setIsNewsletterOpen} 
+      />
     </footer>
   );
 };
