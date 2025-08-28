@@ -43,13 +43,6 @@ const CTABanner = () => {
               Start Your Free Account
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white"
-            >
-              Schedule a Demo
-            </Button>
           </div>
 
           <div className="flex items-center justify-center gap-8 text-sm text-white/70">

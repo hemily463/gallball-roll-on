@@ -48,9 +48,6 @@ const Hero = () => {
                 Get Started Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg">
-                Watch Demo
-              </Button>
             </div>
 
             <div className="flex items-center gap-8 text-sm text-muted-foreground justify-center lg:justify-start">

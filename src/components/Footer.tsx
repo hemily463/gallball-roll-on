@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Github, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -36,18 +37,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Product</h3>
             <div className="space-y-3">
-              <a href="#features" className="block text-muted-foreground hover:text-primary transition-smooth">
+              <Link to="/#features" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Features
-              </a>
-              <a href="#pricing" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/pricing" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Pricing
-              </a>
-              <a href="#integrations" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/integrations" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Integrations
-              </a>
-              <a href="#api" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/api" className="block text-muted-foreground hover:text-primary transition-smooth">
                 API Documentation
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -55,18 +56,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Company</h3>
             <div className="space-y-3">
-              <a href="#about" className="block text-muted-foreground hover:text-primary transition-smooth">
+              <Link to="/about" className="block text-muted-foreground hover:text-primary transition-smooth">
                 About Us
-              </a>
-              <a href="#careers" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/careers" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Careers
-              </a>
-              <a href="#blog" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/blog" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Blog
-              </a>
-              <a href="#press" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/press" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Press
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -74,18 +75,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Support</h3>
             <div className="space-y-3">
-              <a href="#contact" className="block text-muted-foreground hover:text-primary transition-smooth">
+              <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Contact
-              </a>
-              <a href="#help" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/help" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Help Center
-              </a>
-              <a href="#status" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/status" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Status
-              </a>
-              <a href="#security" className="block text-muted-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/security" className="block text-muted-foreground hover:text-primary transition-smooth">
                 Security
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -94,12 +95,12 @@ const Footer = () => {
         <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <span>© 2024 Gallball. All rights reserved.</span>
-            <a href="#privacy" className="hover:text-primary transition-smooth">
+            <Link to="/privacy" className="hover:text-primary transition-smooth">
               Privacy Policy
-            </a>
-            <a href="#terms" className="hover:text-primary transition-smooth">
+            </Link>
+            <Link to="/terms" className="hover:text-primary transition-smooth">
               Terms of Service
-            </a>
+            </Link>
           </div>
           
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
