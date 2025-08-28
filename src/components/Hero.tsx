@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/gallball-hero.jpg";
+import SignupModal from "./SignupModal";
 
 const Hero = () => {
+  const [isSignupOpen, setIsSignupOpen] = useState(false);
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden">
       {/* Background Pattern */}
@@ -35,7 +39,12 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="group">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group"
+                onClick={() => setIsSignupOpen(true)}
+              >
                 Get Started Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -73,6 +82,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <SignupModal 
+        open={isSignupOpen} 
+        onOpenChange={setIsSignupOpen} 
+      />
     </section>
   );
 };
