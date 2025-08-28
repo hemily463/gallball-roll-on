@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Mail } from "lucide-react";
 import heroImage from "@/assets/gallball-hero.jpg";
 import SignupModal from "./SignupModal";
+import NewsletterModal from "./NewsletterModal";
 
 const Hero = () => {
   const [isSignupOpen, setIsSignupOpen] = useState(false);
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
   
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden">
@@ -48,6 +50,16 @@ const Hero = () => {
                 Get Started Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="group border-primary/20 hover:border-primary/40"
+                onClick={() => setIsNewsletterOpen(true)}
+              >
+                <Mail className="w-5 h-5" />
+                Subscribe
+              </Button>
             </div>
 
             <div className="flex items-center gap-8 text-sm text-muted-foreground justify-center lg:justify-start">
@@ -83,6 +95,10 @@ const Hero = () => {
       <SignupModal 
         open={isSignupOpen} 
         onOpenChange={setIsSignupOpen} 
+      />
+      <NewsletterModal 
+        open={isNewsletterOpen} 
+        onOpenChange={setIsNewsletterOpen} 
       />
     </section>
   );
